@@ -1,2 +1,2 @@
 # data-structure
-数据结构的javascript描述
+数据结构的java描述
