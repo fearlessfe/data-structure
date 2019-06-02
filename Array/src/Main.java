@@ -18,5 +18,8 @@ public class Main {
         arr.removeElement(4);
         System.out.println(arr);
 
+        arr.removeFirst());
+        System.out.println(arr);
+
     }
 }
