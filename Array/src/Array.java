@@ -58,6 +58,14 @@ public class Array<T> {
         return data[index];
     }
 
+    public T getLast() throws IllegalAccessException {
+        return get(size - 1);
+    }
+
+    public T getFirst() throws IllegalAccessException {
+        return get(0);
+    }
+
     public void set(int index, T e) throws IllegalAccessException {
         if(index < 0 || index >= size)
             throw new IllegalAccessException("Add failed. Require index >= 0 and index <= size");
@@ -96,11 +104,11 @@ public class Array<T> {
         return ret;
     }
 
-    public T removeFirst(int index) throws IllegalAccessException {
+    public T removeFirst() throws IllegalAccessException {
         return remove(0);
     }
 
-    public T removeLast(int index) throws IllegalAccessException {
+    public T removeLast() throws IllegalAccessException {
         return remove(size - 1);
     }
 
