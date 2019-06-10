@@ -1,4 +1,4 @@
-public class StackArray<T> implements Stact<T> {
+public class StackArray<T> implements Stack<T> {
     Array<T> array;
 
     public StackArray(int capacity){

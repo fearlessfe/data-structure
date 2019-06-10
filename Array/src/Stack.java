@@ -1,4 +1,4 @@
-public interface Stact<T> {
+public interface Stack<T> {
     int getSize();
     boolean isEmpty();
     void push(T e); //O(1)均摊
