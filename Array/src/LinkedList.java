@@ -109,6 +109,7 @@ public class LinkedList<T> {
         return res.toString();
     }
 
+
     public T remove(int index){
         if (index < 0 || index >= size)
             throw new IllegalArgumentException("remove failed; index is illegal");
