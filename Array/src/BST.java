@@ -35,7 +35,7 @@ public class BST<T extends Comparable<T>> {
             add(root, e);
         }
     }
-
+    // 添加元素
     private Node add(Node node, T e){
         // 递归终止条件
 //        if(e.equals(node.e))
@@ -62,4 +62,105 @@ public class BST<T extends Comparable<T>> {
 
         return node;
     }
+
+    public boolean contains(T e){
+        return contains(root, e);
+    }
+    // 查询
+    private  boolean contains(Node node, T e){
+        if(node == null)
+            return false;
+        if(e.compareTo(node.e) == 0)
+            return true;
+         else if(e.compareTo(node.e) > 0)
+            contains(node.right, e);
+         else
+            contains(node.left, e);
+        return false;
+    }
+
+    // 遍历二分搜索树
+    // 前序遍历，先访问节点，然后访问左右子树
+    public  void preOrder(){
+        preOrder(root);
+    }
+    // 前序遍历
+    private void preOrder(Node node){
+        if(node == null)
+            return;
+        System.out.println(node.e);
+        preOrder(node.left);
+
+        preOrder(node.right);
+
+    }
+
+    // 二分搜索树中序遍历的结果是顺序的
+    public void inOrder(){
+        inOrder(root);
+    }
+    // 中序遍历
+    private void inOrder(Node node){
+        if(node == null)
+            return;
+
+        inOrder(node.left);
+        System.out.println(node.e);
+        inOrder(node.right);
+
+    }
+
+    public void postOrder(){
+        postOrder(root);
+    }
+    // 中序遍历
+    private void postOrder(Node node){
+        if(node == null)
+            return;
+
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println(node.e);
+
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder res = new StringBuilder();
+        generateBSTString(root, 0, res);
+        return res.toString();
+    }
+
+    private void generateBSTString(Node node, int depth, StringBuilder res){
+        if(node == null){
+            res.append(generateDepthString(depth) + "null\n");
+            return;
+        }
+
+        res.append(generateDepthString(depth) + node.e + "\n");
+        generateBSTString(node.left, depth + 1, res);
+        generateBSTString(node.right, depth + 1, res);
+    }
+
+    private String generateDepthString(int depth){
+        StringBuilder res = new StringBuilder();
+        for(int i = 0; i < depth; i++){
+            res.append("--");
+        }
+        return res.toString();
+    }
+
+    public static void main(String[] args) {
+        BST<Integer> bst = new BST<>();
+        int[] nums = {5, 3,6,8,4,2};
+        for (int num: nums){
+            bst.add(num);
+        }
+        bst.preOrder();
+        System.out.println();
+        System.out.println(bst.toString());
+        bst.inOrder();
+        bst.postOrder();
+    }
+
 }
