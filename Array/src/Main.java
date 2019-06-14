@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Main {
@@ -34,18 +35,18 @@ public class Main {
 
         int opCount = 10000;
 
-        QueueArray<Integer> queueArray = new QueueArray<>();
-        double time1 = testQueue(queueArray, opCount);
-        System.out.println("QueueArray time: " + time1 + "2");
-
-
-        LoopQueue<Integer> queueLoop = new LoopQueue<>();
-        double time2 = testQueue(queueLoop, opCount);
-        System.out.println("LoopQueue time: " + time2 + "2");
-
-        LinkedListQueue<Integer> linkedListQueue = new LinkedListQueue<>();
-        double time5 = testQueue(linkedListQueue, opCount);
-        System.out.println("LinkedListQueue time: " + time5 + "2");
+//        QueueArray<Integer> queueArray = new QueueArray<>();
+//        double time1 = testQueue(queueArray, opCount);
+//        System.out.println("QueueArray time: " + time1 + "2");
+//
+//
+//        LoopQueue<Integer> queueLoop = new LoopQueue<>();
+//        double time2 = testQueue(queueLoop, opCount);
+//        System.out.println("LoopQueue time: " + time2 + "2");
+//
+//        LinkedListQueue<Integer> linkedListQueue = new LinkedListQueue<>();
+//        double time5 = testQueue(linkedListQueue, opCount);
+//        System.out.println("LinkedListQueue time: " + time5 + "2");
 
 
 //        StackArray<Integer> stackArray = new StackArray<>();
@@ -56,6 +57,20 @@ public class Main {
 //        StackLinkedList<Integer> stackLinkedList = new StackLinkedList<>();
 //        double time4 = testStack(stackLinkedList, opCount);
 //        System.out.println("StackLinkedList time: " + time4 + "2");
+
+        BST<Integer> bst = new BST<>();
+        Random random = new Random();
+        int n = 1000;
+
+        for(int i = 0; i < n; i++){
+            bst.add(random.nextInt(10000));
+        }
+
+        ArrayList<Integer> nums = new ArrayList<>();
+        while (!bst.isEmpty())
+            nums.add(bst.removeMax());
+
+        System.out.println(nums);
 
 
     }

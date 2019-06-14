@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 public class BST<T extends Comparable<T>> {
     private class Node{
         public T e;
@@ -95,6 +98,33 @@ public class BST<T extends Comparable<T>> {
 
     }
 
+    // 前序遍历的非递归写法，使用栈结构，先进右孩子，然后左孩子。深度优先
+    public void preOrderNR() {
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+        while(!stack.isEmpty()){
+            Node cur = stack.pop();
+            System.out.println(cur.e);
+            if(cur.right != null)
+                stack.push(cur.right);
+            if(cur.left != null)
+                stack.push(cur.left);
+        }
+    }
+
+    // 广度优先遍历，层序遍历,主要是为了查找
+    public void levelOrder() {
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()){
+            Node cur = queue.remove();
+            System.out.println(cur.e);
+            if(cur.left != null)
+                queue.add(cur.left);
+            if(cur.right != null)
+                queue.add(cur.right);
+        }
+    }
     // 二分搜索树中序遍历的结果是顺序的
     public void inOrder(){
         inOrder(root);
@@ -122,6 +152,126 @@ public class BST<T extends Comparable<T>> {
         postOrder(node.right);
         System.out.println(node.e);
 
+    }
+
+    // 寻找二分搜索树的最小值和最大值
+    public T minimum(){
+        if(size == 0)
+            throw new IllegalArgumentException("BST is emoty");
+        Node min = minimumNR(root);
+        return min.e;
+    }
+
+    private Node minimum(Node node){
+        if(node.left == null)
+            return node;
+        return minimum(node.left);
+    }
+
+    private Node minimumNR(Node node){
+        while (node.left != null){
+            node = node.left;
+        }
+        return node;
+    }
+
+    public T maximum(){
+        if(size == 0)
+            throw new IllegalArgumentException("BST is emoty");
+        Node max = maximumNR(root);
+        return max.e;
+    }
+
+    private Node maximum(Node node){
+        if(node.right == null)
+            return node;
+        return maximum(node.right);
+    }
+
+    private Node maximumNR(Node node){
+        while (node.right != null){
+            node = node.right;
+        }
+        return node;
+    }
+
+    // 删除二分搜索树的最大最小值
+    public T removeMin(){
+        T ret = minimum();
+        root = removeMin(root);
+        return ret;
+    }
+
+    private Node removeMin(Node node){
+        if(node.left == null){
+            Node righNode = node.right;
+            node.right = null;
+            size--;
+            return righNode;
+        }
+        node.left = removeMin(node.left);
+        return node;
+    }
+
+    public T removeMax(){
+        T ret = maximum();
+        root = removeMax(root);
+        return ret;
+    }
+
+    private Node removeMax(Node node){
+        if(node.right == null){
+            Node leftNode = node.left;
+            node.left = null;
+            size--;
+            return leftNode;
+        }
+        node.right = removeMax(node.right);
+        return node;
+    }
+
+    public void remove(T e){
+        root = remove(root, e);
+    }
+
+    private Node remove(Node node, T e){
+        if(node == null)
+            return null;
+        if(e.compareTo(node.e) < 0){
+            node.left = remove(node.left, e);
+        } else if(e.compareTo(node.e) > 0){
+            node.right = remove(node.right, e);
+        } else {
+            // 左子树为空
+            if(node.left == null){
+                Node righNode = node.right;
+                node.right = null;
+                size--;
+                return righNode;
+            }
+            // 右子树为空
+            if(node.right == null){
+                Node leftNode = node.left;
+                node.left = null;
+                size--;
+                return leftNode;
+            }
+            // 寻找右子树最小值来替换
+
+            //Node successor = minimum(node.right);
+//            successor.right = removeMin(node.right);
+//            successor.left = node.left;
+//            node.left = node.right = null;
+//            return successor;
+
+            // 寻找左子树的最大值来替换
+            Node successor = maximum(node.right);
+            successor.left = removeMax(node.left);
+            successor.right = node.right;
+            node.left = node.right = null;
+            return successor;
+        }
+        return node;
     }
 
     @Override
@@ -156,8 +306,12 @@ public class BST<T extends Comparable<T>> {
         for (int num: nums){
             bst.add(num);
         }
+        System.out.println(bst.minimum());
+        System.out.println(bst.maximum());
+        System.out.println();
         bst.preOrder();
         System.out.println();
+        bst.preOrderNR();
         System.out.println(bst.toString());
         bst.inOrder();
         bst.postOrder();

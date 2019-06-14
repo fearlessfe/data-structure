@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d9cdc585-c25f-4ef6-8e51-4c049991ba14" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Array/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Array/LinkedList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,19 +46,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-704">
-              <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+            <state relative-caret-position="3825">
+              <caret line="273" column="20" selection-start-line="273" selection-start-column="20" selection-end-line="273" selection-end-column="20" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#430#431#0" expanded="true" />
                 <element signature="e#462#463#0" expanded="true" />
-                <element signature="e#1394#1395#0" expanded="true" />
-                <element signature="e#1426#1427#0" expanded="true" />
-                <element signature="e#1849#1850#0" expanded="true" />
-                <element signature="e#1875#1876#0" expanded="true" />
-                <element signature="e#2111#2112#0" expanded="true" />
-                <element signature="e#2141#2142#0" expanded="true" />
-                <element signature="e#2380#2381#0" expanded="true" />
-                <element signature="e#2409#2410#0" expanded="true" />
+                <element signature="e#2681#2682#0" expanded="true" />
+                <element signature="e#2710#2711#0" expanded="true" />
+                <element signature="e#2935#2936#0" expanded="true" />
+                <element signature="e#2966#2967#0" expanded="true" />
+                <element signature="e#5246#5247#0" expanded="true" />
+                <element signature="e#5276#5277#0" expanded="true" />
+                <element signature="e#5507#5535#1" />
+                <element signature="e#5607#5714#1" />
+                <element signature="e#5793#5922#1" />
               </folding>
             </state>
           </provider>
@@ -89,8 +93,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+            <state relative-caret-position="921">
+              <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,9 +164,9 @@
         <option value="$PROJECT_DIR$/src/LoopQueue.java" />
         <option value="$PROJECT_DIR$/src/StackLinkedList.java" />
         <option value="$PROJECT_DIR$/src/LinkedListQueue.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/test.txt" />
         <option value="$PROJECT_DIR$/src/LinkedList.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/BST.java" />
       </list>
     </option>
@@ -178,6 +185,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,7 +202,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -213,7 +220,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BST">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="BST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BST" />
       <module name="Array" />
@@ -251,8 +258,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BST" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.BST" />
         <item itemvalue="Application.LinkedListQueue" />
         <item itemvalue="Application.StackLinkedList" />
         <item itemvalue="Application.LinkedList" />
@@ -298,14 +305,21 @@
       <option name="project" value="LOCAL" />
       <updated>1560348833157</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="二分搜索树的查询与前，中，后序遍历的实现">
+      <created>1560432936645</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1560432936645</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14377682" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14592275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -319,10 +333,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3299363" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32866243" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32771084" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -339,7 +353,8 @@
     <MESSAGE value="完成链表栈，并实现链表队列" />
     <MESSAGE value="二分搜索树寄基础" />
     <MESSAGE value="递归实现二分搜索树的添加操作" />
-    <option name="LAST_COMMIT_MESSAGE" value="递归实现二分搜索树的添加操作" />
+    <MESSAGE value="二分搜索树的查询与前，中，后序遍历的实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="二分搜索树的查询与前，中，后序遍历的实现" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Stack.java">
@@ -427,13 +442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Queue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -455,21 +463,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="921">
+          <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-704">
-          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+        <state relative-caret-position="3825">
+          <caret line="273" column="20" selection-start-line="273" selection-start-column="20" selection-end-line="273" selection-end-column="20" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#430#431#0" expanded="true" />
             <element signature="e#462#463#0" expanded="true" />
-            <element signature="e#1394#1395#0" expanded="true" />
-            <element signature="e#1426#1427#0" expanded="true" />
-            <element signature="e#1849#1850#0" expanded="true" />
-            <element signature="e#1875#1876#0" expanded="true" />
-            <element signature="e#2111#2112#0" expanded="true" />
-            <element signature="e#2141#2142#0" expanded="true" />
-            <element signature="e#2380#2381#0" expanded="true" />
-            <element signature="e#2409#2410#0" expanded="true" />
+            <element signature="e#2681#2682#0" expanded="true" />
+            <element signature="e#2710#2711#0" expanded="true" />
+            <element signature="e#2935#2936#0" expanded="true" />
+            <element signature="e#2966#2967#0" expanded="true" />
+            <element signature="e#5246#5247#0" expanded="true" />
+            <element signature="e#5276#5277#0" expanded="true" />
+            <element signature="e#5507#5535#1" />
+            <element signature="e#5607#5714#1" />
+            <element signature="e#5793#5922#1" />
           </folding>
         </state>
       </provider>
