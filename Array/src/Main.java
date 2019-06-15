@@ -29,11 +29,27 @@ public class Main {
         return (endTime - startTime) / 1000000000.0;
     }
 
+    // 集合性能测试
+    private static double testSet(Set<Integer> q, int opCount){
+        long startTime = System.nanoTime();
+        Random random = new Random();
+        for (int i = 0; i < opCount; i++){
+            q.add(random.nextInt(Integer.MAX_VALUE));
+        }
+        for (int i = 0; i < opCount; i++){
+            q.remove(i);
+        }
+        long endTime = System.nanoTime();
+        return (endTime - startTime) / 1000000000.0;
+    }
+
 
 
     public static void main(String[] args) throws IllegalAccessException {
 
-        int opCount = 10000;
+        int opCount = 50000;
+
+        // 数组队列，循环队列和链表队列性能比较
 
 //        QueueArray<Integer> queueArray = new QueueArray<>();
 //        double time1 = testQueue(queueArray, opCount);
@@ -49,6 +65,7 @@ public class Main {
 //        System.out.println("LinkedListQueue time: " + time5 + "2");
 
 
+        // 数组栈和链表栈性能比较
 //        StackArray<Integer> stackArray = new StackArray<>();
 //        double time3 = testStack(stackArray, opCount);
 //        System.out.println("StackArray time: " + time3 + "2");
@@ -58,20 +75,31 @@ public class Main {
 //        double time4 = testStack(stackLinkedList, opCount);
 //        System.out.println("StackLinkedList time: " + time4 + "2");
 
-        BST<Integer> bst = new BST<>();
-        Random random = new Random();
-        int n = 1000;
+        // 测试二分搜索树删除功能
+        //BST<Integer> bst = new BST<>();
+//        Random random = new Random();
+//        int n = 1000;
+//
+//        for(int i = 0; i < n; i++){
+//            bst.add(random.nextInt(10000));
+//        }
+//
+//        ArrayList<Integer> nums = new ArrayList<>();
+//        while (!bst.isEmpty())
+//            nums.add(bst.removeMax());
+//
+//        System.out.println(nums);
 
-        for(int i = 0; i < n; i++){
-            bst.add(random.nextInt(10000));
-        }
 
-        ArrayList<Integer> nums = new ArrayList<>();
-        while (!bst.isEmpty())
-            nums.add(bst.removeMax());
+        // 二分搜索树和链表集合类性能测试
+        SetLinkedList<Integer> setLinkedList = new SetLinkedList<>();
+        double time8 = testSet(setLinkedList, opCount);
+        System.out.println("setLinkedList time: " + time8 + "2");
 
-        System.out.println(nums);
 
+        SetBST<Integer> setBST = new SetBST<>();
+        double time9 = testSet(setBST, opCount);
+        System.out.println("setBST time: " + time9 + "2");
 
     }
 }
