@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9cdc585-c25f-4ef6-8e51-4c049991ba14" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/FileOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Set.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SetBST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SetLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Map.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MapBST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MapLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Array/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Array/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Array/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Array/LinkedList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,49 +21,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Map.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MapLinkedList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+              <folding>
+                <element signature="e#257#258#0" expanded="true" />
+                <element signature="e#294#295#0" expanded="true" />
+                <element signature="e#496#497#0" expanded="true" />
+                <element signature="e#544#545#0" expanded="true" />
+                <element signature="e#911#912#0" expanded="true" />
+                <element signature="e#943#944#0" expanded="true" />
+                <element signature="e#1965#1966#0" expanded="true" />
+                <element signature="e#2043#2044#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SetBST.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-              <folding>
-                <element signature="e#109#110#0" expanded="true" />
-                <element signature="e#142#143#0" expanded="true" />
-                <element signature="e#184#185#0" expanded="true" />
-                <element signature="e#210#211#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SetLinkedList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="53" selection-start-line="53" selection-end-line="55" selection-end-column="21" />
-              <folding>
-                <element signature="e#118#119#0" expanded="true" />
-                <element signature="e#161#162#0" expanded="true" />
-                <element signature="e#316#317#0" expanded="true" />
-                <element signature="e#346#347#0" expanded="true" />
-                <element signature="e#206#207#0" expanded="true" />
-                <element signature="e#234#235#0" expanded="true" />
-                <element signature="e#276#277#0" expanded="true" />
-                <element signature="e#300#301#0" expanded="true" />
-                <element signature="e#346#347#0" expanded="true" />
-                <element signature="e#374#375#0" expanded="true" />
-                <element signature="e#641#642#0" expanded="true" />
-                <element signature="e#679#680#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+            <state relative-caret-position="247">
+              <caret line="63" column="23" lean-forward="true" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,30 +62,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LinkedList.java">
+        <entry file="file://$PROJECT_DIR$/src/MapBST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="147" column="32" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="32" />
+            <state relative-caret-position="586">
+              <caret line="162" column="5" lean-forward="true" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
               <folding>
-                <element signature="e#1045#1046#0" expanded="true" />
-                <element signature="e#1070#1071#0" expanded="true" />
-                <element signature="method#get#0;class#LinkedList#0" />
-                <element signature="method#set#0;class#LinkedList#0" />
+                <element signature="e#370#371#0" expanded="true" />
+                <element signature="e#440#441#0" expanded="true" />
+                <element signature="e#237#238#0" expanded="true" />
+                <element signature="e#265#266#0" expanded="true" />
+                <element signature="e#435#436#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+                <element signature="e#505#506#0" expanded="true" />
+                <element signature="e#533#534#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StackArray.java">
+        <entry file="file://$PROJECT_DIR$/src/BST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="423">
+              <caret line="302" selection-start-line="302" selection-end-line="317" selection-end-column="5" />
               <folding>
-                <element signature="e#105#106#0" expanded="true" />
-                <element signature="e#150#151#0" expanded="true" />
-                <element signature="e#176#177#0" expanded="true" />
-                <element signature="e#213#214#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,6 +107,7 @@
       <find>== e</find>
       <find>removeFirst</find>
       <find>remove</find>
+      <find>to</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,9 +137,12 @@
         <option value="$PROJECT_DIR$/src/Set.java" />
         <option value="$PROJECT_DIR$/src/FileOperation.java" />
         <option value="$PROJECT_DIR$/src/LinkedList.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/SetLinkedList.java" />
         <option value="$PROJECT_DIR$/src/SetBST.java" />
+        <option value="$PROJECT_DIR$/src/Map.java" />
+        <option value="$PROJECT_DIR$/src/MapLinkedList.java" />
+        <option value="$PROJECT_DIR$/src/MapBST.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -166,8 +159,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -184,6 +175,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,15 +222,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SetLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SetLinkedList" />
+    <configuration name="MapBST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MapBST" />
       <module name="Array" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StackLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="StackLinkedList" />
+    <configuration name="SetLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SetLinkedList" />
       <module name="Array" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -246,10 +239,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MapBST" />
         <item itemvalue="Application.SetLinkedList" />
         <item itemvalue="Application.BST" />
         <item itemvalue="Application.LinkedListQueue" />
-        <item itemvalue="Application.StackLinkedList" />
       </list>
     </recent_temporary>
   </component>
@@ -306,14 +299,21 @@
       <option name="project" value="LOCAL" />
       <updated>1560525346893</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="链表和二分搜索树实现集合，并进行性能比较">
+      <created>1560583450657</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1560583450657</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1502146" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15236051" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -322,7 +322,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30963856" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30963856" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -349,7 +349,8 @@
     <MESSAGE value="递归实现二分搜索树的添加操作" />
     <MESSAGE value="二分搜索树的查询与前，中，后序遍历的实现" />
     <MESSAGE value="二分搜索树的广度优先遍历，获取最小值和最大值，删除树中的节点" />
-    <option name="LAST_COMMIT_MESSAGE" value="二分搜索树的广度优先遍历，获取最小值和最大值，删除树中的节点" />
+    <MESSAGE value="链表和二分搜索树实现集合，并进行性能比较" />
+    <option name="LAST_COMMIT_MESSAGE" value="链表和二分搜索树实现集合，并进行性能比较" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Array.java">
@@ -411,16 +412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="273" column="20" selection-start-line="273" selection-start-column="20" selection-end-line="273" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Set/src/Set.java" />
     <entry file="file://$PROJECT_DIR$/Set/src/BST.java" />
     <entry file="file://$PROJECT_DIR$/Set/src/SetBST.java" />
@@ -462,9 +453,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SetBST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+          <folding>
+            <element signature="e#109#110#0" expanded="true" />
+            <element signature="e#142#143#0" expanded="true" />
+            <element signature="e#184#185#0" expanded="true" />
+            <element signature="e#210#211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SetLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="53" selection-start-line="53" selection-end-line="55" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/StackArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
+        <state relative-caret-position="645">
           <caret line="53" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="e#105#106#0" expanded="true" />
@@ -475,10 +486,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="147" column="32" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="32" />
+        <state relative-caret-position="200">
+          <caret line="138" selection-start-line="138" selection-end-line="148" selection-end-column="9" />
           <folding>
             <element signature="e#1045#1046#0" expanded="true" />
             <element signature="e#1070#1071#0" expanded="true" />
@@ -488,46 +506,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/MapLinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+        <state relative-caret-position="196">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#911#912#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#1965#1966#0" expanded="true" />
+            <element signature="e#2043#2044#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="302" selection-start-line="302" selection-end-line="317" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SetLinkedList.java">
+    <entry file="file://$PROJECT_DIR$/src/MapBST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="53" selection-start-line="53" selection-end-line="55" selection-end-column="21" />
+        <state relative-caret-position="586">
+          <caret line="162" column="5" lean-forward="true" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
           <folding>
-            <element signature="e#118#119#0" expanded="true" />
-            <element signature="e#161#162#0" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#234#235#0" expanded="true" />
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#533#534#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SetBST.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        <state relative-caret-position="247">
+          <caret line="63" column="23" lean-forward="true" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
           <folding>
-            <element signature="e#109#110#0" expanded="true" />
-            <element signature="e#142#143#0" expanded="true" />
-            <element signature="e#184#185#0" expanded="true" />
-            <element signature="e#210#211#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

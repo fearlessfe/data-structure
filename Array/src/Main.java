@@ -43,11 +43,25 @@ public class Main {
         return (endTime - startTime) / 1000000000.0;
     }
 
+    // 映射性能测试
+    private static double testMap(Map<Integer, Integer> q, int opCount){
+        long startTime = System.nanoTime();
+        Random random = new Random();
+        for (int i = 0; i < opCount; i++){
+            q.add(random.nextInt(Integer.MAX_VALUE), random.nextInt(Integer.MAX_VALUE));
+        }
+        for (int i = 0; i < opCount; i++){
+            q.remove(i);
+        }
+        long endTime = System.nanoTime();
+        return (endTime - startTime) / 1000000000.0;
+    }
+
 
 
     public static void main(String[] args) throws IllegalAccessException {
 
-        int opCount = 50000;
+        int opCount = 5000;
 
         // 数组队列，循环队列和链表队列性能比较
 
@@ -100,6 +114,16 @@ public class Main {
         SetBST<Integer> setBST = new SetBST<>();
         double time9 = testSet(setBST, opCount);
         System.out.println("setBST time: " + time9 + "2");
+
+        // 二分搜索树和链表映射类性能测试
+        MapLinkedList<Integer, Integer> mapLinkedList = new  MapLinkedList<>();
+        double time10 = testMap(mapLinkedList, opCount);
+        System.out.println("setLinkedList time: " + time10 + "2");
+
+
+        MapBST<Integer, Integer> mapBST = new MapBST<>();
+        double time11 = testMap(mapBST, opCount);
+        System.out.println("setBST time: " + time11 + "2");
 
     }
 }
