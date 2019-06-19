@@ -57,6 +57,23 @@ public class Main {
         return (endTime - startTime) / 1000000000.0;
     }
 
+    // 映射性能测试
+    private static double testHeap(Integer[] testData, boolean isHeapify){
+        long startTime = System.nanoTime();
+        Random random = new Random();
+
+        MaxHeap<Integer> maxHeap;
+        if(isHeapify)
+            maxHeap = new MaxHeap<>(testData);
+        else {
+            maxHeap = new MaxHeap<>();
+            for (int i = 0; i < testData.length; i++)
+                maxHeap.add(i);
+        }
+        long endTime = System.nanoTime();
+        return (endTime - startTime) / 1000000000.0;
+    }
+
 
 
     public static void main(String[] args) throws IllegalAccessException {
@@ -106,24 +123,39 @@ public class Main {
 
 
         // 二分搜索树和链表集合类性能测试
-        SetLinkedList<Integer> setLinkedList = new SetLinkedList<>();
-        double time8 = testSet(setLinkedList, opCount);
-        System.out.println("setLinkedList time: " + time8 + "2");
-
-
-        SetBST<Integer> setBST = new SetBST<>();
-        double time9 = testSet(setBST, opCount);
-        System.out.println("setBST time: " + time9 + "2");
+//        SetLinkedList<Integer> setLinkedList = new SetLinkedList<>();
+//        double time8 = testSet(setLinkedList, opCount);
+//        System.out.println("setLinkedList time: " + time8 + "2");
+//
+//
+//        SetBST<Integer> setBST = new SetBST<>();
+//        double time9 = testSet(setBST, opCount);
+//        System.out.println("setBST time: " + time9 + "2");
+//
+//        // 二分搜索树和链表映射类性能测试
+//        MapLinkedList<Integer, Integer> mapLinkedList = new  MapLinkedList<>();
+//        double time10 = testMap(mapLinkedList, opCount);
+//        System.out.println("setLinkedList time: " + time10 + "2");
+//
+//
+//        MapBST<Integer, Integer> mapBST = new MapBST<>();
+//        double time11 = testMap(mapBST, opCount);
+//        System.out.println("setBST time: " + time11 + "2");
+        // MaxHeap   heapify  和 add  性能测试
+        int n = 1000000;
+        Integer[] testData = new Integer[n];
+        Random random = new Random();
+        for (int i = 0; i< n; i++)
+            testData[i] = random.nextInt(Integer.MAX_VALUE);
 
         // 二分搜索树和链表映射类性能测试
-        MapLinkedList<Integer, Integer> mapLinkedList = new  MapLinkedList<>();
-        double time10 = testMap(mapLinkedList, opCount);
-        System.out.println("setLinkedList time: " + time10 + "2");
+        double time101 = testHeap(testData, true);
+        System.out.println("heapify time: " + time101 + "2");
+
+        double time102 = testHeap(testData, false);
+        System.out.println("add time: " + time102 + "2");
 
 
-        MapBST<Integer, Integer> mapBST = new MapBST<>();
-        double time11 = testMap(mapBST, opCount);
-        System.out.println("setBST time: " + time11 + "2");
 
     }
 }

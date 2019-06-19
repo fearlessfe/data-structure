@@ -11,6 +11,15 @@ public class MaxHeap<E extends Comparable<E>> {
         data = new Array<>();
     }
 
+    // heapify  将任意数组整理成堆的形状
+    // 1.将数组中的元素增加到堆中 O(nlogn)
+    // 2.将数组看为一颗完全二叉树，将最后一个非叶子节点(最后一个节点的父节点)，执行siftDown方法 O(n)
+    public MaxHeap(E[] arr){
+        data = new Array<>(arr);
+        for (int i = parent(arr.length - 1); i >= 0; i--)
+            siftDown(i);
+    }
+
     public int size(){
         return data.getSize();
     }
@@ -94,6 +103,17 @@ public class MaxHeap<E extends Comparable<E>> {
         }
     }
 
+    // replace  取出最大元素，然后放入一个新的元素；
+    public E replace(E e){
+        E ret = findMax();
+        try {
+            data.set(0, e);
+            siftDown(0);
+        } catch (IllegalAccessException ex) {
+            ex.printStackTrace();
+        }
+        return ret;
+    }
 
     public static void main(String[] args) {
         int n = 1000000;

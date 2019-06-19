@@ -16,6 +16,13 @@ public class Array<T> {
     public Array() {
         this(10);
     }
+
+    public Array(T[] arr){
+        data = (T[])new Object[arr.length];
+        for (int i = 0; i < arr.length; i++)
+            data[i] = arr[i];
+        size = arr.length;
+    }
     // 获取数组元素个数
     public int getSize() {
         return size;
