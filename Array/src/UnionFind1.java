@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class UnionFind1 implements UF {
 
     private int[] id;
@@ -38,4 +40,5 @@ public class UnionFind1 implements UF {
             throw new IllegalArgumentException("p is out of bound");
         return id[p];
     }
+
 }
