@@ -40,6 +40,31 @@ public class AVLTree<K extends Comparable<K>, V> implements Map<K, V> {
         return getHeight(node.left) - getHeight(node.right);
     }
 
+    private Node rightRotate(Node y){
+        Node x = y.left;
+        Node T3 = x.right;
+        y.left = T3;
+        x.right = y;
+
+        // 更新节点height
+        y.height = Math.max(getHeight(y.left), getHeight(y.right)) + 1;
+        x.height = Math.max(getHeight(x.left), getHeight(x.right)) + 1;
+        return x;
+    }
+
+    private Node leftRotate(Node y){
+        Node x = y.right;
+        Node T3 = x.left;
+
+        y.right = T3;
+        x.left = y;
+
+        // 更新节点height
+        y.height = Math.max(getHeight(y.left), getHeight(y.right)) + 1;
+        x.height = Math.max(getHeight(x.left), getHeight(x.right)) + 1;
+        return x;
+    }
+
     @Override
     public void add(K key, V value) {
         if(root == null){
@@ -69,6 +94,24 @@ public class AVLTree<K extends Comparable<K>, V> implements Map<K, V> {
         int balanceFactor = getBalanceFactor(node);
         if(Math.abs(balanceFactor) > 1)
             System.out.println("unbanlanced" + balanceFactor);
+        // LL
+        if(balanceFactor > 1 && getBalanceFactor(node.left) >= 0){
+            return rightRotate(node);
+        }
+        // LR
+        if(balanceFactor > 1 && getBalanceFactor(node.left) < 0){
+            node.left = leftRotate(node.left);
+            return rightRotate(node);
+        }
+        // RR
+        if(balanceFactor < -1 && getBalanceFactor(node.right) <= 0){
+            return leftRotate(node);
+        }
+        // RL
+        if(balanceFactor < -1 && getBalanceFactor(node.right) > 0){
+            node.right = rightRotate(node.right);
+            return leftRotate(node);
+        }
         return node;
     }
 
