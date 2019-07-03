@@ -128,24 +128,28 @@ public class AVLTree<K extends Comparable<K>, V> implements Map<K, V> {
     private Node remove(Node node, K key){
         if(node == null)
             return null;
+
+        Node retNode;
         if(key.compareTo(node.key) < 0){
             node.left = remove(node.left, key);
+            retNode = node;
         } else if(key.compareTo(node.key) > 0){
             node.right = remove(node.right, key);
+            retNode = node;
         } else {
             // 左子树为空
             if(node.left == null){
                 Node righNode = node.right;
                 node.right = null;
                 size--;
-                return righNode;
+                retNode = righNode;
             }
             // 右子树为空
             if(node.right == null){
                 Node leftNode = node.left;
                 node.left = null;
                 size--;
-                return leftNode;
+                retNode = leftNode;
             }
             // 寻找右子树最小值来替换
 
@@ -160,9 +164,33 @@ public class AVLTree<K extends Comparable<K>, V> implements Map<K, V> {
             successor.left = removeMax(node.left);
             successor.right = node.right;
             node.left = node.right = null;
-            return successor;
+            retNode = successor;
         }
-        return node;
+
+        retNode.height = 1 + Math.max(getHeight(retNode.left), getHeight(retNode.right));
+
+        int balanceFactor = getBalanceFactor(retNode);
+        if(Math.abs(balanceFactor) > 1)
+            System.out.println("unbanlanced" + balanceFactor);
+        // LL
+        if(balanceFactor > 1 && getBalanceFactor(retNode.left) >= 0){
+            return rightRotate(retNode);
+        }
+        // LR
+        if(balanceFactor > 1 && getBalanceFactor(retNode.left) < 0){
+            retNode.left = leftRotate(retNode.left);
+            return rightRotate(retNode);
+        }
+        // RR
+        if(balanceFactor < -1 && getBalanceFactor(retNode.right) <= 0){
+            return leftRotate(retNode);
+        }
+        // RL
+        if(balanceFactor < -1 && getBalanceFactor(retNode.right) > 0){
+            retNode.right = rightRotate(retNode.right);
+            return leftRotate(retNode);
+        }
+        return retNode;
     }
 
     @Override
